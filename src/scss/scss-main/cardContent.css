@@ -1,0 +1,48 @@
+.cardContent {
+  justify-self: center;
+  width: -moz-min-content;
+  width: min-content;
+  border-radius: 8px;
+}
+.cardContent .contentFigure {
+  position: relative;
+  width: -moz-min-content;
+  width: min-content;
+  margin: 0;
+  border-radius: 8px;
+}
+.cardContent .contentFigure .typeProducts {
+  border-radius: 8px;
+  padding: 0 5px 0 5px;
+  box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.999);
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: rgba(0, 0, 0, 0.823);
+  background-color: rgba(255, 255, 255, 0.686);
+}
+.cardContent .contentFigure .addProducts {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  background-color: rgba(255, 255, 255, 0.686);
+  box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.999);
+  padding: 5px;
+  width: 30px;
+  border-radius: 100%;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+.cardContent .contentFigure .addProducts li {
+  color: white;
+}
+.cardContent .contentFigure .active {
+  background-color: rgba(0, 0, 0, 0.608);
+  color: white;
+}
+.cardContent .contentFigure .imgProducts {
+  border-radius: 8px;
+  width: 250px;
+}/*# sourceMappingURL=cardContent.css.map */

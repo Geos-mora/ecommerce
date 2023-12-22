@@ -1,0 +1,79 @@
+@use './scss/scss-Header/navContentLeft';
+@use './scss/scss-Header/navContentRight';
+@use './components/Main/pages/home/containerHome';
+@use './components/Main/pages/MyOrder/myOrder';
+@use './components/Main/pages/MyOrders/myOrders';
+
+$color-black-text:#333;
+$border:1px solid black;
+
+
+*{
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    font-size: 19px;
+    color: $color-black-text;
+    
+}
+.container{
+    
+    header{
+        border-bottom: 1px solid black;
+               
+        .navContainer{
+            display: flex;
+            justify-content: space-between;
+            margin: auto;
+            align-items: center;
+            width: 80%;
+   
+
+            //@ navContentLeft
+            //@ navContentRigh  
+            .logo{
+                h1{font-size:30px;}
+            }
+
+            .all{
+
+                p{
+
+                    &:active{
+                        border-bottom:1px solid black ;
+                    }
+                }
+            }
+
+            .imgContainer{
+                margin: 0;
+                position: relative;
+                span{
+                    position: absolute;
+                    box-shadow: 0 0 5px rgba(8, 8, 0, 0.507);
+                    right: -10px;
+                    top: -5px;
+                    border-radius: 90px;
+                    padding: 3px;
+                    width: 25px;
+                    text-align: center;
+                    background-color: rgba(210, 105, 30, 0.414);
+                    color:rgba(0, 0, 0, 0.653);
+                }
+            }
+        
+        }
+    }
+    .mainContainer{
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        // @use containerhome
+        // @use myOrder        
+        // @use myOrders        
+    }
+
+}

@@ -1,0 +1,41 @@
+.productOrdersContainer{
+    display: flex;
+    align-items: center;
+    width: 100%;
+   
+   .figureContainerOrder{
+    margin: 0;
+    .imgProductsOrder{
+        width: 80px;
+        border-radius: 8px;
+    }
+}
+.contentParagraphOrder{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    .nameProductOrder{
+        width: 100%;
+        h1{
+            font-weight: normal;
+        }
+    }
+    .pirceProductOrder{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content:end;
+        padding:0 20px 0 0;
+        .priceProduct{
+            margin: 5px;
+        }
+        .eraseProduct{
+            font-size: 25px;
+            margin: 5px;
+            cursor: pointer;
+        }
+        
+        
+    }
+   }
+}

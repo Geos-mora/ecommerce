@@ -1,0 +1,35 @@
+@use './cardComponent/cardsContainers-scss/cardContent';
+@use './ScssHome/contentTitleMain';
+@use './ScssHome/productDitailAside';
+@use './ScssHome/productOrderAside';
+
+$border:1px solid black;
+
+
+.containerHome{
+    width: 100%;
+    margin-top: 50px;
+    position: relative;
+    
+    
+    
+    //@use contentTitleMain 
+    
+    
+    
+    .cardsContainer{
+        padding-top: 50px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        max-width: 80%;
+        margin: auto;
+        gap: 5px;
+      
+            //@use cardContent 
+
+            //productDitailAside
+            //productOrderAside
+      
+    }  
+    
+}

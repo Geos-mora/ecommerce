@@ -1,0 +1,68 @@
+$border:1px solid black;
+
+.myOrdersContainer{
+
+    margin-top: 60px;
+    width:500px;
+    height:80vh;
+    padding: 10px;
+    .titleMyOrders{
+
+        text-align: center;    
+    }
+   
+        
+        .myOrdersContent{
+
+            border: $border;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+            padding: 15px;
+            .dateAndarticulos{
+                display: flex;
+                flex-direction: column;
+                
+                margin: 0;
+                gap: 10px;
+                margin-left: 5px;
+            
+            }
+            .priceMyOrders{
+   
+                width: 60%;
+                text-align: end;
+                margin-right: 80px;
+
+               
+            }
+            .arrowBack{
+                font-size: 40px;
+                border: none;
+
+                border-radius: 90px;
+                padding: 0;
+                width: 50px;
+                cursor: pointer;
+                transition: all 0.3s ease;
+               &:hover{
+                box-shadow: 0 0 5px skyblue;
+                font-size: 42px;
+                
+               }
+               &:active{
+                box-shadow: 0 0 5px red;
+               }
+            
+            }
+           
+        }
+    
+    
+}
+
+@media (min-width:800px) {
+    
+}

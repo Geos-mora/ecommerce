@@ -1,0 +1,45 @@
+@use './minicardContainer';
+
+$border:1px solid black;
+
+.productOrderAside{
+    .ordersContainerAside {
+        padding: 20px;
+        width: 25%;
+        border: $border;
+        border-radius: 8px;
+        box-shadow: 0px 0px 5px;
+        background:white;
+        position:fixed;
+        height: 100vh;
+        top: 90px;
+        right: 0;
+        text-align: center;
+        .titleOrderContent{
+            display:  flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            .symbolCLose{
+              background: rgba(0, 0, 0, 0.596);
+              color: white;
+              font-weight: bold;
+              border-radius:90px ;
+              width: 30px;
+              padding: 5px;
+              box-shadow: 0px 0px 7px black;
+              cursor: pointer;
+            }
+      
+          }
+
+          .containerMiniCards{
+            overflow:auto ;
+            height: 100%;
+            
+            //@use minicardCOntainer
+          }
+      
+    }
+   
+}

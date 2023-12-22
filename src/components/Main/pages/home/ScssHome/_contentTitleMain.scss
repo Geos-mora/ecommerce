@@ -1,0 +1,30 @@
+.contentTitle{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+    .containerTitle{
+        margin-bottom:25px ;
+        h1{
+            font-size: 42px;
+            margin: 0;
+            text-align: center;
+        }
+        p{
+            margin: 0;
+            text-align: center;
+        }
+
+    }
+    .formContent{
+       
+       width: 50%;
+        .inputProducts{
+            width: 100%;
+            border-radius: 8px;
+            padding: 5px;
+        }
+    }
+}

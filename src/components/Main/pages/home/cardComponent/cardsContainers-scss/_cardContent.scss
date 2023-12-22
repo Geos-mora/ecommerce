@@ -1,0 +1,166 @@
+.cardContent{
+    justify-self: center;
+    width: min-content;
+    border-radius: 8px;
+    .contentFigure{
+        position: relative;
+        width:min-content ;
+        margin: 0;
+        border-radius: 8px;
+        
+        .typeProducts{
+           border-radius: 8px;
+           padding: 0 5px 0 5px;
+           box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.999);
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            color: rgba(0, 0, 0, 0.823);
+            background-color: rgba(255, 255, 255, 0.686);
+        }
+        .addProducts{
+            position: absolute;
+            right: 8px;
+            top: 8px;
+            background-color: rgba(128, 125, 125, 0.664);
+            box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.999);
+            padding: 5px;
+            width: 30px;
+            border-radius:100%;
+            text-align: center;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            color: white;
+        
+        }
+        .containerCheck{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: end;
+            .checkProduct{
+                box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.999);
+                background-color: rgba(27, 20, 20, 0.726);
+                transition:all 0.3s ease ;
+                text-align: center;
+                border-radius:100%;
+                font-weight: bold;
+                padding: 5px;
+                width: 30px;
+                right: 8px;
+                top: 8px;
+                margin: 8px;
+                cursor: pointer;
+                color: white;
+                z-index: 0;
+               
+                
+            }
+            .activeCheckProduct{
+                box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.999);
+                background-color: rgba(27, 20, 20, 0.726);
+                transition:all 0.3s ease ;
+                text-align: center;
+                border-radius:100%;
+                font-weight: bold;
+                padding: 5px;
+                width: 30px;
+                right: 8px;
+                top: 8px;
+                margin: 8px;
+                cursor: pointer;
+                color: white;
+                z-index: 12;
+            }
+
+            .sumaProducts{ 
+                transition: all 0.4s ease-in-out ;
+                padding:40px 10px 10px 10px;
+                position: absolute;
+                text-align: center;
+                height: 100%;
+                width: 100%;
+                margin: 0;
+                opacity: 0;
+                overflow: hidden;
+                top: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: end;
+                &:hover{
+                    
+                    overflow: visible;
+                    opacity: 1;
+                   
+                  
+                }
+                .incrementDecrementContainer{
+
+                    .increment{
+                        font-size: 20px;
+                        background-color: #ffffff;
+                        border-radius: 90px;
+                        width: 23px;
+                        margin-top: 5px;
+                        box-shadow: 0 0 10px white;
+                        transition: all 0.3s ease-in-out ;
+                        cursor: pointer;
+                       
+                        &:hover{
+                            box-shadow: 0 0 5px rgba(6, 255, 6, 0.849);
+                        } 
+                        
+                        
+                    }
+                    .decrement{
+                        font-size: 20px;
+                        cursor: pointer;
+                        box-shadow: 0 0 5px white;
+                        background-color: #ffffff;
+                        border-radius: 90px;
+                        width: 23px;
+                        margin-top: 5px;
+                        transition: all 0.3s ease-in-out ;
+                        &:hover{
+                            box-shadow: 0 0 5px rgb(253, 41, 3);
+                        
+                        } 
+                    }
+                }
+               
+    
+            }
+        }
+        
+      
+
+      
+
+        .active{
+          background-color: rgba(0, 0, 0, 0.608);
+          color: white;  
+        }
+        .imgProducts{
+            border-radius: 8px;
+            width: 250px;
+            z-index: 2;
+            
+        }
+    } 
+    .contentParagraph{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0;
+        padding: 5px;
+
+        .pirceProduct{
+            font-weight: bold;
+            font-size: 25px;
+        }
+        
+    }
+}
