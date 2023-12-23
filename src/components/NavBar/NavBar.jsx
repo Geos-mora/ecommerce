@@ -57,7 +57,7 @@ const NavBar = () => {
             </ul>    
             <figure className="imgContainer">
               <span>{count}</span>
-               <img width={50} src="/src/assets/1000_F_546799506_jh8UYsqJjlIEcI7FNNbVtyPSmfhhzAog.jpg" alt="" />
+              {<img width={50} src="/src/assets/shopping-cart.png" alt="" />}
               </figure>  
                     
         </nav>

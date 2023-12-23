@@ -1,11 +1,11 @@
-$border:1px solid black;
+$border:2px solid #A8AFD3;
 
 .productDitailAside{
   .asideContainerDitail{
     width: 25%;
     border: $border;
     border-radius: 8px;
-    box-shadow: 0px 0px 5px;
+    box-shadow: 0px 0px 5px #A8AFD3;
     background:white;
     position:fixed;
     height: 89%;

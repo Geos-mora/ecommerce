@@ -212,9 +212,9 @@
 
 .productDitailAside .asideContainerDitail {
   width: 25%;
-  border: 1px solid black;
+  border: 2px solid #A8AFD3;
   border-radius: 8px;
-  box-shadow: 0px 0px 5px;
+  box-shadow: 0px 0px 5px #A8AFD3;
   background: white;
   position: fixed;
   height: 89%;
@@ -353,8 +353,9 @@
 .productOrderAside .ordersContainerAside {
   padding: 20px;
   width: 25%;
+  border: 2px solid #A8AFD3;
   border-radius: 8px;
-  box-shadow: 0px 0px 5px;
+  box-shadow: 0px 0px 10px #A8AFD3;
   background: white;
   position: fixed;
   height: 89%;
@@ -509,10 +510,13 @@
   font-family: Arial, sans-serif;
   font-size: 19px;
   color: #333;
+  padding: 0;
+  margin: 0;
 }
 
 .container header {
-  border-bottom: 1px solid black;
+  background: #A8AFD3;
+  padding: 10px;
 }
 .container header .navContainer {
   display: flex;
@@ -547,4 +551,5 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background: #EDEDED;
 }/*# sourceMappingURL=index.css.map */

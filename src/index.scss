@@ -15,12 +15,17 @@ $border:1px solid black;
     font-family: Arial, sans-serif;
     font-size: 19px;
     color: $color-black-text;
+    padding: 0;
+    margin: 0;
     
 }
 .container{
     
     header{
-        border-bottom: 1px solid black;
+        background: #A8AFD3  ;
+        //border-bottom: 1px solid black;
+        padding: 10px;
+       
                
         .navContainer{
             display: flex;
@@ -28,8 +33,7 @@ $border:1px solid black;
             margin: auto;
             align-items: center;
             width: 80%;
-   
-
+            
             //@ navContentLeft
             //@ navContentRigh  
             .logo{
@@ -70,7 +74,7 @@ $border:1px solid black;
         display: flex;
         justify-content: center;
         align-items: center;
-        
+        background: #EDEDED;
         // @use containerhome
         // @use myOrder        
         // @use myOrders        
