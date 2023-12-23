@@ -25,7 +25,7 @@ const NavBar = () => {
 
         <nav  className="navContainer">  
         <NavLink to='/'>
-        <div className="logo" onClick={()=>{handleAllandShopi()}}><h1>Shopi</h1></div>
+        <div className="logo" onClick={()=>{handleAllandShopi()}}><h1>ecommerce Mora</h1></div>
         </NavLink>
         
 
