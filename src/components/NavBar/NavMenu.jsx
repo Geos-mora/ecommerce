@@ -28,7 +28,7 @@ const NavMenu = ({handleAllandShopi}) => {
                      <div className="Electronics" onClick={()=>{handleShopiAll(),setSearchByCategory('Electronics')}}><p>Electronics</p></div>
                  </NavLink>
                  <NavLink to='/'>
-                     <div className="Forniture" onClick={()=>{handleShopiAll(),setSearchByCategory('Furniture')}}><p>Forniture</p></div>
+                     <div className="Forniture" onClick={()=>{handleShopiAll(),setSearchByCategory('Furniture')}}><p>forniture</p></div>
                  </NavLink>
                  <NavLink to='/'>
                      <div className="Toys" onClick={()=>{handleShopiAll(),setSearchByCategory('Toys')}}><p>Toys</p></div>
