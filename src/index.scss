@@ -11,7 +11,6 @@ $border:1px solid black;
 *{
     list-style: none;
     text-decoration: none;
-    box-sizing: border-box;
     font-family: Arial, sans-serif;
     font-size: 19px;
     color: $color-black-text;
@@ -19,26 +18,55 @@ $border:1px solid black;
     margin: 0;
     
 }
+
 .container{
-    
+    overflow: hidden;
+    position: relative;
     header{
+        position: relative;
         background: #A8AFD3  ;
-        //border-bottom: 1px solid black;
-        padding: 10px;
+      display: flex;
+      align-items: center;
+      
+        padding: 20px;
+
+
        
+           .logo{
+               padding-left: 50px;
+
+               .ten{
+                   font-size: 40px;
+                   color: #EAFF75;
+               }
+               .den{
+                font-size: 35px;
+                color: #001171 ;
+               }
+               .cias{
+                font-size: 30px;
+                color: #D63535 ;
+               }
+           }
+      
                
         .navContainer{
+         
             display: flex;
             justify-content: space-between;
             margin: auto;
             align-items: center;
-            width: 80%;
-            
-            //@ navContentLeft
-            //@ navContentRigh  
-            .logo{
-                h1{font-size:30px;}
+            width: 100%;
+
+          
+            .menuContainer{
+                display: flex;
+                align-items: center;
+                width: 70%;
+                //@ navContentLeft
+                //@ navContentRigh  
             }
+       
 
             .all{
 
@@ -50,23 +78,26 @@ $border:1px solid black;
                 }
             }
 
-            .imgContainer{
-                margin: 0;
-                position: relative;
-                span{
-                    position: absolute;
-                    box-shadow: 0 0 5px rgba(8, 8, 0, 0.507);
-                    right: -10px;
-                    top: -5px;
-                    border-radius: 90px;
-                    padding: 3px;
-                    width: 25px;
-                    text-align: center;
-                    background-color: rgba(210, 105, 30, 0.414);
-                    color:rgba(0, 0, 0, 0.653);
-                }
-            }
         
+        }
+
+        .imgContainer{
+            margin: 0;
+            position: relative;
+            right: 3px;
+    
+            span{
+                position: absolute;
+                box-shadow: 0 0 5px rgba(8, 8, 0, 0.507);
+                right: -10px;
+                top: -5px;
+                border-radius: 90px;
+                padding: 3px;
+                width: 25px;
+                text-align: center;
+                background-color: rgba(210, 105, 30, 0.414);
+                color:rgba(0, 0, 0, 0.653);
+            }
         }
     }
     .mainContainer{
@@ -80,4 +111,71 @@ $border:1px solid black;
         // @use myOrders        
     }
 
+}
+
+
+@media (max-width:1114px) {
+    .menuContainer{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 95px;
+        height: auto;
+        left: 0;
+        z-index: 2;
+        max-width: 20%;
+        box-shadow: 0 0 10px;
+    
+
+        .navContentLeft{
+            position:sticky;
+            display: flex;
+           flex-direction: column;
+            background-color: #333;
+            gap: 0;
+          
+            div{
+                border-bottom: 1px solid grey;
+                background-color:#d4d4d4;
+                width: 400px;
+                padding: 10px;
+                transition: 0.3s all ease;
+                &:hover{
+                    background-color: #A8AFD3;
+                }
+                p{
+                    text-align: start;
+                    font-size: 20px;
+                    margin-left:30px ;
+                }
+            }
+            
+        }
+        .navContentRight{
+            background-color: #333;
+            display: flex;
+            flex-direction: column;
+    
+            gap: 0;
+            div{
+                border-bottom: 1px solid grey;
+                background-color:#d4d4d4;
+               width: 400px;
+               padding: 10px;
+               transition: 0.3s all ease;
+               &:hover{
+                   background-color: #A8AFD3;
+               }
+               p{
+  
+                 text-align: start;   
+                font-size: 20px;
+                margin-left: 30px;
+
+            }
+            }
+        }
+    
+    }
+ 
 }

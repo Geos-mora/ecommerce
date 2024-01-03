@@ -1,6 +1,7 @@
 $border:2px solid #A8AFD3;
 
 .productDitailAside{
+  z-index: 33333;
   .asideContainerDitail{
     width: 25%;
     border: $border;
@@ -72,4 +73,40 @@ $border:2px solid #A8AFD3;
     display: none;
   }
 
+}
+
+@media (max-width:1300px) {
+  .productDitailAside{
+ 
+    .asideContainerDitail{
+      width: 40%;
+    
+    }
+  }
+}
+@media (max-width:668px) {
+  .productDitailAside{
+    .asideContainerDitail{
+      
+      width: 50%;
+      height: 90%;
+    
+      .productDitailContainer{
+
+        .figureContainerDitail{
+          
+          align-items: center;
+          .imgProductsDitail{
+            width: 100%;
+            
+          }
+          
+        }
+       
+      }
+  
+    }
+
+  }
+  
 }

@@ -76,3 +76,28 @@ $border:2px solid #A8AFD3;
         display: none;
       }
 }
+
+
+
+@media (max-width:1300px) {
+  .productOrderAside{
+    .ordersContainerAside {
+
+          width: 40%;
+        
+      }
+ 
+  }
+}
+
+@media (max-width:668px) {
+  
+  .productOrderAside{
+    .ordersContainerAside {
+
+          width: 50%;
+        
+      }
+ 
+  }
+}

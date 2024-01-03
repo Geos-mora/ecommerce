@@ -16,12 +16,6 @@ const MyOrder = () => {
     
     
     const orderItem=sendOrderBack.state===true?reviewItem[0]:lastItem
-    
-    
-    console.log('reviewItemBack',reviewItem);
-  
-    
-   
 
 
 

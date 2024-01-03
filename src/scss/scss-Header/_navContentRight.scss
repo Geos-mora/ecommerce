@@ -6,33 +6,27 @@ $border:1px solid black;
     align-items: center;
     justify-content: center;
     gap: 15px;
-    margin: 0;
-    width: 80%;
-   
-    li{
-        &:nth-child(1){
-            
-            .navLink{
-                border-bottom: none;
-                color: gray;
-            }    
-        } 
-   
-        
-        
-               
-        
-        .navLink{
-            text-decoration: none;
-            color: $color-black-text;
-        }
-        .active{
-            
-            border-bottom: 2px solid black;
-            
-        }
-  
+    width: 100%;
+    text-align: center;
+ div{
+    
+    p{
+      width: 100%;
     }
+ }
+  
+}
+
+
+@media (max-width:1527px ) {
+    .navContentRight {
+
+      div{
+        p{
+            font-size: 13px;
+        }
+      }
+}
 }
 
 

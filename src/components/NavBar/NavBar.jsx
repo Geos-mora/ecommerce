@@ -1,60 +1,91 @@
-import { useContext } from "react";
-import { NavItemsLeft, NavItemsRight } from "../../assets/NavItemsLeft";
+import { useContext, useEffect, useState } from "react";
 import { DataContext } from "../../context/DataProvider";
-import NavContent from "./NavContent";
 import { NavLink } from "react-router-dom";
+import NavMenu from "./NavMenu";
 
 
 
 const NavBar = () => {
 
-  const {count,setSendOrderBack,setShowOrders,setSearchByTitle,setSearchByCategory,} = useContext(DataContext);
-  
-  const handleShopiAll=()=>{
-      setSendOrderBack({})
-      setShowOrders(false)
-      setSearchByTitle(null)
-   }
+  const {count,setSearchByTitle,setSearchByCategory,} = useContext(DataContext);
+  const [open, setOpen] = useState(false);
+  const [anchoDEventana, setAnchoDEventana] = useState(window.innerWidth);
+console.log(open);
+console.log(anchoDEventana);
    const handleAllandShopi=()=>{
     setSearchByTitle(null)
     setSearchByCategory(null)
    }
 
+   const actualizarAnchoDeVentana=()=>{
+    setAnchoDEventana(window.innerWidth)
+   }
+   
+   useEffect(() => {
+    
+    window.addEventListener('resize',actualizarAnchoDeVentana)
+   
+    return  () => {
+        window.removeEventListener('resize',actualizarAnchoDeVentana);
  
+    }
+   }, []);
+
+ 
+ 
+   const RenderMenu=()=>{
+          
+        if (anchoDEventana<=1114) {
+          return(
+              <div className="menu-desplegable" onClick={()=>{setOpen(!open)}}>
+                     &#9776;
+                 </div>  
+               )
+         }else{
+             return(
+
+                 setOpen(false)  
+             )
+         }   
+   }
+
+   const RenderMenuBar=()=>{
+
+    
+            if (open===true&&anchoDEventana<=1114) {
+                return(
+                <NavMenu handleAllandShopi={handleAllandShopi}   />
+                )
+                
+            }else if(anchoDEventana>=1114){
+                return(
+                    <NavMenu handleAllandShopi={handleAllandShopi}   />
+                )
+            }
+                
+            
+        
+
+   }
+
+
     return (  
 
         <nav  className="navContainer">  
-        <NavLink to='/'>
-        <div className="logo" onClick={()=>{handleAllandShopi()}}><h1>ecommerce Mora</h1></div>
-        </NavLink>
-        
 
-           <ul  className="navContentLeft"> 
-              <NavLink to='/'>
-                 <div className="all" onClick={()=>handleAllandShopi()}><p>All</p></div>
-             </NavLink>
-             <NavLink to='/'>
-                 <div className="Clothes" onClick={()=>{handleShopiAll(),setSearchByCategory('Clothes')}}><p>Clothes</p></div>
-             </NavLink>
-             <NavLink to='/'>
-                 <div className="Electronics" onClick={()=>{handleShopiAll(),setSearchByCategory('Electronics')}}><p>Electronics</p></div>
-             </NavLink>
-             <NavLink to='/'>
-                 <div className="Forniture" onClick={()=>{handleShopiAll(),setSearchByCategory('Furniture')}}><p>Forniture</p></div>
-             </NavLink>
-             <NavLink to='/'>
-                 <div className="Toys" onClick={()=>{handleShopiAll(),setSearchByCategory('Toys')}}><p>Toys</p></div>
-             </NavLink>
-             <NavLink to='/'>
-                 <div className="Other" onClick={()=>{handleShopiAll(),setSearchByCategory('Others')}}><p>Other</p></div>
-             </NavLink>
-              <NavContent navItemsLeft={NavItemsLeft}  />
-            </ul>     
-             
+        <RenderMenu />
+          
+
+        <NavLink to='/'>
+        <div className="logo" onClick={()=>{handleAllandShopi()}}><h1> <span className="ten">Ten</span><span className="den">den</span><span className="cias">cias</span> </h1></div>
+        </NavLink>
+
+       
+        <RenderMenuBar/>
+          
             
-            <ul  className="navContentRight"> 
-              <NavContent navItemsRight={NavItemsRight}/>
-            </ul>    
+        
+        
             <figure className="imgContainer">
               <span>{count}</span>
               {<img width={50} src="/src/assets/shopping-cart.png" alt="" />}

@@ -4,39 +4,36 @@
   align-items: center;
   justify-content: center;
   gap: 15px;
-  margin: 0;
-  width: 80%;
-  position: relative;
+  width: 100%;
+  text-align: center;
 }
-.navContentLeft li .navLink {
-  text-decoration: none;
-  color: #333;
-}
-.navContentLeft li .active {
-  border-bottom: 2px solid black;
+.navContentLeft div p {
+  width: 100%;
 }
 
+@media (max-width: 1527px) {
+  .navContentLeft div p {
+    font-size: 13px;
+  }
+}
 .navContentRight {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   gap: 15px;
-  margin: 0;
-  width: 80%;
+  width: 100%;
+  text-align: center;
 }
-.navContentRight li:nth-child(1) .navLink {
-  border-bottom: none;
-  color: gray;
-}
-.navContentRight li .navLink {
-  text-decoration: none;
-  color: #333;
-}
-.navContentRight li .active {
-  border-bottom: 2px solid black;
+.navContentRight div p {
+  width: 100%;
 }
 
+@media (max-width: 1527px) {
+  .navContentRight div p {
+    font-size: 13px;
+  }
+}
 .cardContent {
   justify-self: center;
   width: -moz-min-content;
@@ -49,6 +46,9 @@
   width: min-content;
   margin: 0;
   border-radius: 8px;
+}
+.cardContent .contentFigure img {
+  max-width: 300px;
 }
 .cardContent .contentFigure .typeProducts {
   border-radius: 8px;
@@ -181,6 +181,11 @@
   font-size: 25px;
 }
 
+@media (max-width: 665px) {
+  .cardContent .contentFigure .imgProducts {
+    max-width: 150px;
+  }
+}
 .contentTitle {
   display: flex;
   flex-direction: column;
@@ -210,6 +215,20 @@
   padding: 5px;
 }
 
+@media (max-width: 647px) {
+  .contentTitle .containerTitle {
+    margin-bottom: 15px;
+  }
+  .contentTitle .containerTitle h1 {
+    font-size: 20px;
+  }
+  .contentTitle .containerTitle p {
+    font-size: 15px;
+  }
+}
+.productDitailAside {
+  z-index: 33333;
+}
 .productDitailAside .asideContainerDitail {
   width: 25%;
   border: 2px solid #A8AFD3;
@@ -277,6 +296,23 @@
   display: none;
 }
 
+@media (max-width: 1300px) {
+  .productDitailAside .asideContainerDitail {
+    width: 40%;
+  }
+}
+@media (max-width: 668px) {
+  .productDitailAside .asideContainerDitail {
+    width: 50%;
+    height: 90%;
+  }
+  .productDitailAside .asideContainerDitail .productDitailContainer .figureContainerDitail {
+    align-items: center;
+  }
+  .productDitailAside .asideContainerDitail .productDitailContainer .figureContainerDitail .imgProductsDitail {
+    width: 100%;
+  }
+}
 .productOrdersContainer {
   display: flex;
   align-items: center;
@@ -410,6 +446,16 @@
   display: none;
 }
 
+@media (max-width: 1300px) {
+  .productOrderAside .ordersContainerAside {
+    width: 40%;
+  }
+}
+@media (max-width: 668px) {
+  .productOrderAside .ordersContainerAside {
+    width: 50%;
+  }
+}
 .containerHome {
   width: 100%;
   margin-top: 50px;
@@ -424,6 +470,27 @@
   gap: 5px;
 }
 
+@media (max-width: 1238px) {
+  .containerHome {
+    margin-top: 20px;
+  }
+  .containerHome .cardsContainer {
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+  }
+}
+@media (max-width: 924px) {
+  .containerHome {
+    margin-top: 20px;
+  }
+  .containerHome .cardsContainer {
+    padding: 20px;
+    justify-content: space-around;
+    margin: auto;
+    gap: 0;
+    grid-template-columns: 200px 200px;
+  }
+}
 .myOrderContainer {
   width: 30%;
   padding: 10px;
@@ -506,7 +573,6 @@
 * {
   list-style: none;
   text-decoration: none;
-  box-sizing: border-box;
   font-family: Arial, sans-serif;
   font-size: 19px;
   color: #333;
@@ -514,28 +580,53 @@
   margin: 0;
 }
 
+.container {
+  overflow: hidden;
+  position: relative;
+}
 .container header {
+  position: relative;
   background: #A8AFD3;
-  padding: 10px;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+.container header .logo {
+  padding-left: 50px;
+}
+.container header .logo .ten {
+  font-size: 40px;
+  color: #EAFF75;
+}
+.container header .logo .den {
+  font-size: 35px;
+  color: #001171;
+}
+.container header .logo .cias {
+  font-size: 30px;
+  color: #D63535;
 }
 .container header .navContainer {
   display: flex;
   justify-content: space-between;
   margin: auto;
   align-items: center;
-  width: 80%;
+  width: 100%;
 }
-.container header .navContainer .logo h1 {
-  font-size: 30px;
+.container header .navContainer .menuContainer {
+  display: flex;
+  align-items: center;
+  width: 70%;
 }
 .container header .navContainer .all p:active {
   border-bottom: 1px solid black;
 }
-.container header .navContainer .imgContainer {
+.container header .imgContainer {
   margin: 0;
   position: relative;
+  right: 3px;
 }
-.container header .navContainer .imgContainer span {
+.container header .imgContainer span {
   position: absolute;
   box-shadow: 0 0 5px rgba(8, 8, 0, 0.507);
   right: -10px;
@@ -552,4 +643,61 @@
   justify-content: center;
   align-items: center;
   background: #EDEDED;
+}
+
+@media (max-width: 1114px) {
+  .menuContainer {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 95px;
+    height: auto;
+    left: 0;
+    z-index: 2;
+    max-width: 20%;
+    box-shadow: 0 0 10px;
+  }
+  .menuContainer .navContentLeft {
+    position: sticky;
+    display: flex;
+    flex-direction: column;
+    background-color: #333;
+    gap: 0;
+  }
+  .menuContainer .navContentLeft div {
+    border-bottom: 1px solid grey;
+    background-color: #d4d4d4;
+    width: 400px;
+    padding: 10px;
+    transition: 0.3s all ease;
+  }
+  .menuContainer .navContentLeft div:hover {
+    background-color: #A8AFD3;
+  }
+  .menuContainer .navContentLeft div p {
+    text-align: start;
+    font-size: 20px;
+    margin-left: 30px;
+  }
+  .menuContainer .navContentRight {
+    background-color: #333;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+  .menuContainer .navContentRight div {
+    border-bottom: 1px solid grey;
+    background-color: #d4d4d4;
+    width: 400px;
+    padding: 10px;
+    transition: 0.3s all ease;
+  }
+  .menuContainer .navContentRight div:hover {
+    background-color: #A8AFD3;
+  }
+  .menuContainer .navContentRight div p {
+    text-align: start;
+    font-size: 20px;
+    margin-left: 30px;
+  }
 }/*# sourceMappingURL=index.css.map */

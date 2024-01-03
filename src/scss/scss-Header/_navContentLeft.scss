@@ -6,28 +6,24 @@ $border:1px solid black;
     align-items: center;
     justify-content: center;
     gap: 15px;
-    margin: 0;
-    width: 80%;
-    position: relative;
+    width: 100%;
+
+    text-align: center;
+ div{
     
-    li{
-        
-        
-       
-     
-   
-      
-        .navLink{
-            text-decoration: none;
-            color: $color-black-text;
-            
-        }
-        .active{
-            
-            border-bottom: 2px solid black;
-            
-        
-        }
-      
+    p{
+      width: 100%;
     }
+ }
+  
+}
+
+@media (max-width:1527px ) {
+    .navContentLeft {
+      div{
+        p{
+            font-size: 13px;
+        }
+      }
+}
 }

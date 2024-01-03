@@ -14,10 +14,6 @@ import DataProvider from './context/DataProvider'
 const AppRoutes=()=>{
   let routes =useRoutes([
     {path:'/', element:<Home/>},
-    {path:'/', element:<Home/>},
-    {path:'/', element:<Home/>},
-    {path:'/', element:<Home/>},
-    {path:'/', element:<Home/>},
     {path:'My-Account', element:<MyAccount/>},
     {path:'My-Order', element:<MyOrder/> },
     {path:'My-Oreders', element:<MyOrders/>},
@@ -50,3 +46,4 @@ function App() {
 }
 
 export default App
+

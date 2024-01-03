@@ -33,3 +33,29 @@ $border:1px solid black;
     }  
     
 }
+
+@media ( max-width:1238px ) {
+    .containerHome{
+
+        margin-top: 20px;
+        .cardsContainer{
+            grid-template-columns: 1fr 1fr 1fr;
+            justify-content: center;
+        }  
+        
+    }
+}
+@media ( max-width:924px ) {
+    .containerHome{
+        
+        margin-top: 20px;
+        .cardsContainer{       
+            padding:20px;
+            justify-content: space-around;
+            margin: auto;
+            gap: 0;
+            grid-template-columns:200px  200px ; 
+        }  
+        
+    }
+}
