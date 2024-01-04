@@ -236,7 +236,7 @@
   box-shadow: 0px 0px 5px #A8AFD3;
   background: white;
   position: fixed;
-  height: 89%;
+  height: 80vh;
   top: 90px;
   right: 0;
   text-align: center;
@@ -304,7 +304,7 @@
 @media (max-width: 668px) {
   .productDitailAside .asideContainerDitail {
     width: 50%;
-    height: 90%;
+    height: 80vh;
   }
   .productDitailAside .asideContainerDitail .productDitailContainer .figureContainerDitail {
     align-items: center;
@@ -315,6 +315,7 @@
 }
 .productOrdersContainer {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
 }
@@ -335,12 +336,12 @@
 }
 .productOrdersContainer .contentParagraphOrder .nameProductOrder h1 {
   font-weight: normal;
+  text-align: center;
 }
 .productOrdersContainer .contentParagraphOrder .pirceProductOrder {
   width: 100%;
   display: flex;
-  align-items: center;
-  justify-content: end;
+  justify-content: center;
   padding: 0 20px 0 0;
 }
 .productOrdersContainer .contentParagraphOrder .pirceProductOrder .priceProduct {
@@ -352,40 +353,23 @@
   cursor: pointer;
 }
 
-.productOrderAside .ordersContainerAside {
-  padding: 20px;
-  width: 25%;
-  border: 1px solid black;
-  border-radius: 8px;
-  box-shadow: 0px 0px 5px;
-  background: white;
-  position: fixed;
-  height: 100vh;
-  top: 90px;
-  right: 0;
-  text-align: center;
+@media (max-width: 600px) {
+  .productOrdersContainer {
+    width: 100%;
+  }
+  .productOrdersContainer .contentParagraphOrder {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+  .productOrdersContainer .contentParagraphOrder .nameProductOrder > h1 {
+    font-size: 15px;
+  }
+  .productOrdersContainer .contentParagraphOrder .pirceProductOrder .priceProduct {
+    font-size: 18px;
+  }
 }
-.productOrderAside .ordersContainerAside .titleOrderContent {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-}
-.productOrderAside .ordersContainerAside .titleOrderContent .symbolCLose {
-  background: rgba(0, 0, 0, 0.596);
-  color: white;
-  font-weight: bold;
-  border-radius: 90px;
-  width: 30px;
-  padding: 5px;
-  box-shadow: 0px 0px 7px black;
-  cursor: pointer;
-}
-.productOrderAside .ordersContainerAside .containerMiniCards {
-  overflow: auto;
-  height: 100%;
-}
-
 .productOrderAside .ordersContainerAside {
   padding: 20px;
   width: 25%;
@@ -394,7 +378,7 @@
   box-shadow: 0px 0px 10px #A8AFD3;
   background: white;
   position: fixed;
-  height: 89%;
+  height: 90vh;
   top: 90px;
   right: 0;
   text-align: center;
@@ -416,8 +400,11 @@
   cursor: pointer;
 }
 .productOrderAside .ordersContainerAside .containerMiniCards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   overflow: auto;
-  height: 75%;
+  height: 80%;
 }
 .productOrderAside .ordersContainerAside .footerAside .total {
   display: flex;
@@ -449,11 +436,16 @@
 @media (max-width: 1300px) {
   .productOrderAside .ordersContainerAside {
     width: 40%;
+    height: 80vh;
   }
 }
 @media (max-width: 668px) {
   .productOrderAside .ordersContainerAside {
     width: 50%;
+    height: 70vh;
+  }
+  .productOrderAside .ordersContainerAside .containerMiniCards {
+    height: 60%;
   }
 }
 .containerHome {
@@ -492,7 +484,7 @@
   }
 }
 .myOrderContainer {
-  width: 30%;
+  width: 90%;
   padding: 10px;
   height: 80vh;
   margin-top: 3%;
@@ -589,26 +581,24 @@
   background: #A8AFD3;
   display: flex;
   align-items: center;
+  justify-content: center;
   padding: 20px;
 }
-.container header .logo {
-  padding-left: 50px;
-}
-.container header .logo .ten {
+.container header .logo .titleLogo .ten {
   font-size: 40px;
   color: #EAFF75;
 }
-.container header .logo .den {
+.container header .logo .titleLogo .den {
   font-size: 35px;
   color: #061152;
 }
-.container header .logo .cias {
+.container header .logo .titleLogo .cias {
   font-size: 30px;
   color: #c01f1f;
 }
 .container header .navContainer {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   margin: auto;
   align-items: center;
   width: 100%;
@@ -616,7 +606,7 @@
 .container header .navContainer .menuContainer {
   display: flex;
   align-items: center;
-  width: 70%;
+  width: auto;
 }
 .container header .navContainer .all p:active {
   border-bottom: 1px solid black;
@@ -653,15 +643,13 @@
     top: 95px;
     height: auto;
     left: 0;
-    z-index: 2;
-    max-width: 20%;
-    box-shadow: 0 0 10px;
+    z-index: 222;
+    box-shadow: 5px 5px 15px;
   }
   .menuContainer .navContentLeft {
     position: sticky;
     display: flex;
     flex-direction: column;
-    background-color: #333;
     gap: 0;
   }
   .menuContainer .navContentLeft div {
@@ -680,7 +668,6 @@
     margin-left: 30px;
   }
   .menuContainer .navContentRight {
-    background-color: #333;
     display: flex;
     flex-direction: column;
     gap: 0;

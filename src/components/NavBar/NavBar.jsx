@@ -77,7 +77,7 @@ console.log(anchoDEventana);
           
 
         <NavLink to='/'>
-        <div className="logo" onClick={()=>{handleAllandShopi()}}><h1> <span className="ten">Ten</span><span className="den">den</span><span className="cias">cias</span> </h1></div>
+        <div className="logo" onClick={()=>{handleAllandShopi()}}><h1 className="titleLogo"> <span className="ten">Ten</span><span className="den">den</span><span className="cias">cias</span> </h1></div>
         </NavLink>
 
        
