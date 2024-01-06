@@ -63,6 +63,8 @@ const DataProvider = ({children}) => {
     const [stateOrderBack, setStateOrderBack] = useState(false);
     // pone falso o verdadero un estado de orderback
 
+    const [open, setOpen] = useState(false);
+    //pone falso o verdadero en rederMenu
 //------------------------------------------------------------------------------------------------------------
 
     const filterItemsByTitle=(data,searchByTitle)=>(
@@ -126,8 +128,9 @@ const DataProvider = ({children}) => {
                 filteredItems, 
                 setFilteredItems,
                 searchByCategory,
-                setSearchByCategory
-              
+                setSearchByCategory,
+                open,
+                setOpen
 
             }}>
                 {children}

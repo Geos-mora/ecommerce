@@ -56,7 +56,7 @@ $border:1px solid black;
         .navContainer{
          
             display: flex;
-            justify-content: space-around;
+            justify-content: space-between;
             margin: auto;
             align-items: center;
             width: 100%;
@@ -65,7 +65,7 @@ $border:1px solid black;
             .menuContainer{
                 display: flex;
                 align-items: center;
-                width: auto;
+                width: 90%;
                
                 //@ navContentLeft
                 //@ navContentRigh  
@@ -125,6 +125,7 @@ $border:1px solid black;
         position: absolute;
         top: 95px;
         height: auto;
+        max-width:  max-content;
         left: 0;
         z-index: 222;
         box-shadow: 5px 5px 15px;
@@ -135,6 +136,7 @@ $border:1px solid black;
             display: flex;
             flex-direction: column;
             gap: 0;
+            flex-wrap: nowrap;
             div{
                 border-bottom: 1px solid grey;
                 background-color:#d4d4d4;
@@ -157,7 +159,7 @@ $border:1px solid black;
 
             display: flex;
             flex-direction: column;
-    
+            flex-wrap: nowrap;
             gap: 0;
             div{
                 border-bottom: 1px solid grey;

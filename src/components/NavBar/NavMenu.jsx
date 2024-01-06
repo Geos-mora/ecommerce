@@ -1,25 +1,29 @@
 import { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import { DataContext } from "../../context/DataProvider";
-import PropTypes from "prop-types";
 
 
-const NavMenu = ({handleAllandShopi}) => {
 
-    const {setSendOrderBack, setShowOrders, setSearchByTitle,setSearchByCategory} = useContext(DataContext);
+const NavMenu = () => {
+
+    const {setSendOrderBack, setShowOrders, setSearchByTitle,setSearchByCategory,setOpen} = useContext(DataContext);
         
   const handleShopiAll=()=>{
     setSendOrderBack({})
     setShowOrders(false)
     setSearchByTitle(null)
+    setOpen(false)
+    setSearchByTitle(null)
+    setSearchByCategory(null)
+  
  }
-
+    
     return (
         <div className='menuContainer'>
     
                <ul  className="navContentLeft"> 
                   <NavLink to='/'>
-                     <div className="all" onClick={()=>handleAllandShopi()}><p>All</p></div>
+                     <div className="all" onClick={()=>handleShopiAll()}><p>All</p></div>
                  </NavLink>
                  <NavLink to='/'>
                      <div className="Clothes" onClick={()=>{handleShopiAll(),setSearchByCategory('Clothes')}}><p>Clothes</p></div>
@@ -64,7 +68,3 @@ const NavMenu = ({handleAllandShopi}) => {
 
 export default NavMenu;
 
-
-NavMenu.propTypes={
-    handleAllandShopi:PropTypes.any
-}

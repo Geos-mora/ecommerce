@@ -18,7 +18,10 @@ $border:2px solid #A8AFD3;
       justify-content: space-between;
       align-items: center;
       padding: 20px;
+      
       .symbolCLose{
+        position:fixed;
+        right: 10px;
         background: black;
         color: white;
         font-weight: bold;
@@ -32,6 +35,7 @@ $border:2px solid #A8AFD3;
     }
     .productDitailContainer{
       padding: 20px;
+     
       .figureContainerDitail{
         margin: 0;
         padding: 0;
@@ -67,7 +71,7 @@ $border:2px solid #A8AFD3;
         }
       }
     }
-
+    
   }
   .inactiveDitail{
     display: none;
@@ -90,8 +94,10 @@ $border:2px solid #A8AFD3;
       
       width: 50%;
       height: 80vh;
-    
+      overflow: scroll;
+      
       .productDitailContainer{
+        
 
         .figureContainerDitail{
           

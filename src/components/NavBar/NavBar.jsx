@@ -7,43 +7,34 @@ import NavMenu from "./NavMenu";
 
 const NavBar = () => {
 
-  const {count,setSearchByTitle,setSearchByCategory,} = useContext(DataContext);
-  const [open, setOpen] = useState(false);
+  const {open, setOpen,count,setShowDitail} = useContext(DataContext);
+ 
   const [anchoDEventana, setAnchoDEventana] = useState(window.innerWidth);
-console.log(open);
-console.log(anchoDEventana);
-   const handleAllandShopi=()=>{
-    setSearchByTitle(null)
-    setSearchByCategory(null)
-   }
+
+  
 
    const actualizarAnchoDeVentana=()=>{
     setAnchoDEventana(window.innerWidth)
    }
    
    useEffect(() => {
-    
     window.addEventListener('resize',actualizarAnchoDeVentana)
-   
     return  () => {
         window.removeEventListener('resize',actualizarAnchoDeVentana);
- 
     }
    }, []);
 
  
  
-   const RenderMenu=()=>{
-          
+   const RenderMenu=()=>{    
         if (anchoDEventana<=1114) {
           return(
-              <div className="menu-desplegable" onClick={()=>{setOpen(!open)}}>
+              <div className="menu-desplegable" onClick={()=>{setOpen(!open),setShowDitail(false)}}>
                      &#9776;
                  </div>  
                )
          }else{
              return(
-
                  setOpen(false)  
              )
          }   
@@ -54,12 +45,12 @@ console.log(anchoDEventana);
     
             if (open===true&&anchoDEventana<=1114) {
                 return(
-                <NavMenu handleAllandShopi={handleAllandShopi}   />
+                <NavMenu   />
                 )
                 
             }else if(anchoDEventana>=1114){
                 return(
-                    <NavMenu handleAllandShopi={handleAllandShopi}   />
+                    <NavMenu   />
                 )
             }
                 
@@ -77,7 +68,7 @@ console.log(anchoDEventana);
           
 
         <NavLink to='/'>
-        <div className="logo" onClick={()=>{handleAllandShopi()}}><h1 className="titleLogo"> <span className="ten">Ten</span><span className="den">den</span><span className="cias">cias</span> </h1></div>
+        <div className="logo" ><h1 className="titleLogo"> <span className="ten">Ten</span><span className="den">den</span><span className="cias">cias</span> </h1></div>
         </NavLink>
 
        

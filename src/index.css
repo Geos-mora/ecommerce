@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: center;
   gap: 15px;
-  width: 100%;
+  width: 90%;
   text-align: center;
 }
 .navContentLeft div p {
@@ -248,6 +248,8 @@
   padding: 20px;
 }
 .productDitailAside .asideContainerDitail .titleDitail .symbolCLose {
+  position: fixed;
+  right: 10px;
   background: black;
   color: white;
   font-weight: bold;
@@ -305,6 +307,7 @@
   .productDitailAside .asideContainerDitail {
     width: 50%;
     height: 80vh;
+    overflow: scroll;
   }
   .productDitailAside .asideContainerDitail .productDitailContainer .figureContainerDitail {
     align-items: center;
@@ -452,6 +455,7 @@
   width: 100%;
   margin-top: 50px;
   position: relative;
+  height: 100vh;
 }
 .containerHome .cardsContainer {
   padding-top: 50px;
@@ -598,7 +602,7 @@
 }
 .container header .navContainer {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   margin: auto;
   align-items: center;
   width: 100%;
@@ -606,7 +610,7 @@
 .container header .navContainer .menuContainer {
   display: flex;
   align-items: center;
-  width: auto;
+  width: 90%;
 }
 .container header .navContainer .all p:active {
   border-bottom: 1px solid black;
@@ -642,6 +646,8 @@
     position: absolute;
     top: 95px;
     height: auto;
+    max-width: -moz-max-content;
+    max-width: max-content;
     left: 0;
     z-index: 222;
     box-shadow: 5px 5px 15px;
@@ -651,6 +657,7 @@
     display: flex;
     flex-direction: column;
     gap: 0;
+    flex-wrap: nowrap;
   }
   .menuContainer .navContentLeft div {
     border-bottom: 1px solid grey;
@@ -670,6 +677,7 @@
   .menuContainer .navContentRight {
     display: flex;
     flex-direction: column;
+    flex-wrap: nowrap;
     gap: 0;
   }
   .menuContainer .navContentRight div {
