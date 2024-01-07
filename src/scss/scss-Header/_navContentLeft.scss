@@ -10,9 +10,12 @@ $border:1px solid black;
 
     text-align: center;
  div{
-    
-    p{
-      width: 100%;
+   p{
+     width: 100%;
+    }
+
+    &:hover{
+      border-bottom: 2px solid black;
     }
  }
   

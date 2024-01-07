@@ -10,6 +10,9 @@
 .navContentLeft div p {
   width: 100%;
 }
+.navContentLeft div:hover {
+  border-bottom: 2px solid black;
+}
 
 @media (max-width: 1527px) {
   .navContentLeft div p {
@@ -27,6 +30,9 @@
 }
 .navContentRight div p {
   width: 100%;
+}
+.navContentRight div:hover {
+  border-bottom: 2px solid black;
 }
 
 @media (max-width: 1527px) {
@@ -455,7 +461,7 @@
   width: 100%;
   margin-top: 50px;
   position: relative;
-  height: 100vh;
+  height: 100%;
 }
 .containerHome .cardsContainer {
   padding-top: 50px;
