@@ -15,6 +15,9 @@
 }
 
 @media (max-width: 1527px) {
+  .navContentLeft div {
+    margin-left: 50px;
+  }
   .navContentLeft div p {
     font-size: 13px;
   }
@@ -27,6 +30,9 @@
   gap: 15px;
   width: 100%;
   text-align: center;
+}
+.navContentRight div {
+  margin-left: 50px;
 }
 .navContentRight div p {
   width: 100%;
@@ -491,6 +497,7 @@
     margin: auto;
     gap: 0;
     grid-template-columns: 200px 200px;
+    height: 500px;
   }
 }
 .myOrderContainer {
@@ -582,6 +589,10 @@
   margin: 0;
 }
 
+body {
+  height: 100%;
+}
+
 .container {
   overflow: hidden;
   position: relative;
@@ -643,6 +654,7 @@
   justify-content: center;
   align-items: center;
   background: #EDEDED;
+  height: 100%;
 }
 
 @media (max-width: 1114px) {

@@ -17,6 +17,12 @@ $border:1px solid black;
     padding: 0;
     margin: 0;
     
+    
+}
+body{
+
+    height: 100%;
+
 }
 
 .container{
@@ -110,7 +116,7 @@ $border:1px solid black;
         justify-content: center;
         align-items: center;
         background: #EDEDED;
-        
+        height: 100%;
         // @use containerhome
         // @use myOrder        
         // @use myOrders        

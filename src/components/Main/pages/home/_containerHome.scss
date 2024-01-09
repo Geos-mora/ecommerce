@@ -24,6 +24,7 @@ $border:1px solid black;
         max-width: 80%;
         margin: auto;
         gap: 5px;
+        
       
             //@use cardContent 
 
@@ -55,6 +56,7 @@ $border:1px solid black;
             margin: auto;
             gap: 0;
             grid-template-columns:200px  200px ; 
+            height: 500px;
         }  
         
     }
